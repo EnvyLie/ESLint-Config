@@ -1,4 +1,6 @@
->## 在vscode中的配置
+>## 第一步：全局安装ESLInt,babel-eslint,eslint-plugin-html,eslint-plugin-react
+>## 第二步：在任意目录放置.eslintrc.js
+>## 第三步：在vscode中的配置
 ```javascript
 // eslint config start
     "eslint.options": {
