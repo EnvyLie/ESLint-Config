@@ -9,7 +9,8 @@ npm i babel-eslint eslint-plugin-html eslint-plugin-react -g
     "eslint.options": {
         "configFile": "C:/Users/Administrator/.eslint/.eslintrc.js",
         "plugins": [
-            "html"
+            "html",
+            "react"
         ]
     },
     "eslint.validate": [

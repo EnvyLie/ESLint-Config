@@ -11,7 +11,8 @@ module.exports = {
     },
     "globals": {
         "angular": false,
-        "__DEV__": true
+        "__DEV__": true,
+        "weex": true
     },
     "parser": "babel-eslint",
     "rules": {
@@ -47,7 +48,7 @@ module.exports = {
         "no-const-assign": 2, //不允许const重新赋值
         "no-class-assign": 2, //不允许对class重新赋值
         "no-debugger": 1, //debugger 调试代码未删除
-        "no-console": 1, //console 未删除
+        "no-console": 0, //console 未删除
         "no-constant-condition": 2, //常量作为条件
         "no-dupe-args": 2, //参数重复
         "no-dupe-keys": 2, //对象属性重复
@@ -67,12 +68,13 @@ module.exports = {
         "no-mixed-spaces-and-tabs": 0,
         "new-cap": 2,//函数名首行大写必须使用new方式调用，首行小写必须用不带new方式调用
         "new-parens": 2,//new时必须加小括号
-        "newline-after-var": 2,//变量声明后是否需要空一行
+        "newline-after-var": 0,//变量声明后是否需要空一行
         "constructor-super": 2, //要求在构造函数中有 super() 的调用
 
 
         //代码风格优化 --------------------------------------
-        "semi": [2, "never", { "omitLastInOneLineBlock": true, "beforeStatementContinuationChars": "always"}],
+        "semi-style": ["error", "last"],//	强制分号的位置
+        "semi": [2, "never", { "beforeStatementContinuationChars": "never" }],//要求或禁止使用分号代替 ASI (semi)
         "arrow-body-style": [2, "always"], //	要求箭头函数体使用大括号
         "arrow-parens": [2, "as-needed", { "requireForBlockBody": true }], //要求箭头函数的参数使用圆括号 
         "no-duplicate-imports": [1, { "includeExports": true }], //禁止重复导入
