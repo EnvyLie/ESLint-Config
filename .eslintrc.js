@@ -12,7 +12,8 @@ module.exports = {
     "globals": {
         "angular": false,
         "__DEV__": true,
-        "weex": true
+        "weex": true,
+        "Vue": true
     },
     "parser": "babel-eslint",
     "rules": {
@@ -26,14 +27,9 @@ module.exports = {
         "no-empty": 2, //空代码块
 
         //使用前未定义
-        "no-use-before-define": [
-            1,
-            "nofunc"
-        ],
-
+        "no-use-before-define": [1,"nofunc"],
         "complexity": [0, 10], //圈复杂度大于*
-
-        //定义数组或对象最后多余的逗号
+        // 定义数组或对象最后多余的逗号
         "comma-dangle": [
             2,
             "never"
@@ -70,7 +66,6 @@ module.exports = {
         "new-parens": 2,//new时必须加小括号
         "newline-after-var": 0,//变量声明后是否需要空一行
         "constructor-super": 2, //要求在构造函数中有 super() 的调用
-
 
         //代码风格优化 --------------------------------------
         "semi-style": ["error", "last"],//	强制分号的位置
