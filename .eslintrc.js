@@ -71,13 +71,13 @@ module.exports = {
         "semi-style": ["error", "last"],//	强制分号的位置
         "semi": [2, "never", { "beforeStatementContinuationChars": "never" }],//要求或禁止使用分号代替 ASI (semi)
         "arrow-body-style": [2, "always"], //	要求箭头函数体使用大括号
-        "arrow-parens": [2, "as-needed", { "requireForBlockBody": true }], //要求箭头函数的参数使用圆括号 
+        "arrow-parens": [1, "as-needed", { "requireForBlockBody": true }], //要求箭头函数的参数使用圆括号 
         "no-duplicate-imports": [1, { "includeExports": true }], //禁止重复导入
         "eqeqeq": [2, "always", { "null": "ignore" }],//要求使用 === 和 !==
         "no-irregular-whitespace": 0,
         "no-else-return": 0, //在else代码块中return，else是多余的
         "no-multi-spaces": 0, //不允许多个空格
-
+        "vue/no-parsing-error": [0, { "x-invalid-end-tag": false }],
         //object直接量建议写法 : 后一个空格前面不留空格
         "key-spacing": [
             1,

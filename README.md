@@ -27,4 +27,6 @@ npm i babel-eslint eslint-plugin-html eslint-plugin-react -g
             "autoFix": true
         }
     ],
+    // 为了解决 [vue/no-parsing-error] Parsing error: x-invalid-end-tag. 报错
+    "vetur.validation.template": false,
 ```
