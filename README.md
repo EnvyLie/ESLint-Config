@@ -6,7 +6,9 @@ npm i eslint babel-eslint eslint-plugin-html eslint-plugin-react eslint-plugin-v
 
 > ## 第二步：在任意目录放置.eslintrc.js
 >
-> ## 第三步：在 vscode 中的配置
+> ## 第三步：在vscode下载ESLint,Prettier - Code formatter,stylus,language-stylus,Vetur
+>
+> ## 第四步：在 vscode 中的配置
 
 ```javascript
 // eslint config start
@@ -20,7 +22,7 @@ npm i eslint babel-eslint eslint-plugin-html eslint-plugin-react eslint-plugin-v
 // eslint config start
 "eslint.autoFixOnSave": true,
 "eslint.options": {
-    "configFile": "C:/Users/Administrator/.eslint/.eslintrc.js"
+    "configFile": "你的目录/.eslintrc.js"
 },
 "eslint.validate": [
     "javascript",
