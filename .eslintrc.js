@@ -1,7 +1,13 @@
 module.exports = {
+  "extends":[
+     //在这里添加更多的通用规则集，例如：
+    // 'eslint：recommended'，
+    "plugin:vue/base"
+  ],
     "plugins": [
         "react",
-        "html"
+        "html",
+        "vue"
     ],
     "env": {
         "node": true,
@@ -27,7 +33,7 @@ module.exports = {
         "no-empty": 2, //空代码块
 
         //使用前未定义
-        "no-use-before-define": [1,"nofunc"],
+        "no-use-before-define": [1, "nofunc"],
         "complexity": [0, 10], //圈复杂度大于*
         // 定义数组或对象最后多余的逗号
         "comma-dangle": [
@@ -70,14 +76,13 @@ module.exports = {
         //代码风格优化 --------------------------------------
         "semi-style": ["error", "last"],//	强制分号的位置
         "semi": [2, "never", { "beforeStatementContinuationChars": "never" }],//要求或禁止使用分号代替 ASI (semi)
-        "arrow-body-style": [2, "always"], //	要求箭头函数体使用大括号
-        "arrow-parens": [1, "as-needed", { "requireForBlockBody": true }], //要求箭头函数的参数使用圆括号 
+        "arrow-body-style": [1, "always"], //	要求箭头函数体使用大括号
+        "arrow-parens": [0, "as-needed", { "requireForBlockBody": true }], //要求箭头函数的参数使用圆括号 
         "no-duplicate-imports": [1, { "includeExports": true }], //禁止重复导入
         "eqeqeq": [2, "always", { "null": "ignore" }],//要求使用 === 和 !==
         "no-irregular-whitespace": 0,
         "no-else-return": 0, //在else代码块中return，else是多余的
         "no-multi-spaces": 0, //不允许多个空格
-        "vue/no-parsing-error": [0, { "x-invalid-end-tag": false }],
         //object直接量建议写法 : 后一个空格前面不留空格
         "key-spacing": [
             1,
@@ -88,7 +93,7 @@ module.exports = {
         ],
 
         "block-scoped-var": 1, //变量应在外部上下文中声明，不应在{}代码块中
-        "consistent-return": 1, //函数返回值可能是不同类型
+        "consistent-return": 0, //函数返回值可能是不同类型
         "accessor-pairs": 1, //object getter/setter方法需要成对出现
 
         //换行调用对象方法  点操作符应写在行首
@@ -136,7 +141,7 @@ module.exports = {
 
         // 强制使用有效的 JSDoc 注释
         "valid-jsdoc": [
-            2,
+            0,
             {
                 "requireParamDescription": true,
                 "requireReturnDescription": true
@@ -156,6 +161,43 @@ module.exports = {
             }
         ],
         "curly": 0, //if、else、while、for代码块用{}包围
-        
+        "vue/no-parsing-error": [2, {
+          "abrupt-closing-of-empty-comment": true,
+          "absence-of-digits-in-numeric-character-reference": true,
+          "cdata-in-html-content": true,
+          "character-reference-outside-unicode-range": true,
+          "control-character-in-input-stream": true,
+          "control-character-reference": true,
+          "eof-before-tag-name": true,
+          "eof-in-cdata": true,
+          "eof-in-comment": true,
+          "eof-in-tag": true,
+          "incorrectly-closed-comment": true,
+          "incorrectly-opened-comment": true,
+          "invalid-first-character-of-tag-name": true,
+          "missing-attribute-value": true,
+          "missing-end-tag-name": true,
+          "missing-semicolon-after-character-reference": true,
+          "missing-whitespace-between-attributes": true,
+          "nested-comment": true,
+          "noncharacter-character-reference": true,
+          "noncharacter-in-input-stream": true,
+          "null-character-reference": true,
+          "surrogate-character-reference": true,
+          "surrogate-in-input-stream": true,
+          "unexpected-character-in-attribute-name": true,
+          "unexpected-character-in-unquoted-attribute-value": true,
+          "unexpected-equals-sign-before-attribute-name": true,
+          "unexpected-null-character": true,
+          "unexpected-question-mark-instead-of-tag-name": true,
+          "unexpected-solidus-in-tag": true,
+          "unknown-named-character-reference": true,
+          "end-tag-with-attributes": true,
+          "duplicate-attribute": true,
+          "end-tag-with-trailing-solidus": true,
+          "non-void-html-element-start-tag-with-trailing-solidus": false,
+          "x-invalid-end-tag": true,
+          "x-invalid-namespace": true
+        }]
     }
 };
