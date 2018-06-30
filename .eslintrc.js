@@ -1,9 +1,9 @@
 module.exports = {
-  "extends":[
-     //在这里添加更多的通用规则集，例如：
-    // 'eslint：recommended'，
-    "plugin:vue/base"
-  ],
+    "extends": [
+        //在这里添加更多的通用规则集，例如：
+        // 'eslint：recommended'，
+        "plugin:vue/recommended"
+    ],
     "plugins": [
         "react",
         "html",
@@ -21,8 +21,22 @@ module.exports = {
         "weex": true,
         "Vue": true
     },
-    "parser": "babel-eslint",
+    "parserOptions": {
+        "parser": "babel-eslint",
+        "ecmaVersion": 2017,
+        "sourceType": "module"
+    },
     "rules": {
+        'vue/max-attributes-per-line': [
+            2,
+            {
+                singleline: 3,
+                multiline: {
+                    max: 3,
+                    allowFirstLine: false
+                }
+            }
+        ],
         //官方文档 http://eslint.org/docs/rules/
         //参数：0 关闭，1 警告，2 错误
         "quotes": [1, "single"],                  //建议使用单引号
@@ -162,42 +176,42 @@ module.exports = {
         ],
         "curly": 0, //if、else、while、for代码块用{}包围
         "vue/no-parsing-error": [2, {
-          "abrupt-closing-of-empty-comment": true,
-          "absence-of-digits-in-numeric-character-reference": true,
-          "cdata-in-html-content": true,
-          "character-reference-outside-unicode-range": true,
-          "control-character-in-input-stream": true,
-          "control-character-reference": true,
-          "eof-before-tag-name": true,
-          "eof-in-cdata": true,
-          "eof-in-comment": true,
-          "eof-in-tag": true,
-          "incorrectly-closed-comment": true,
-          "incorrectly-opened-comment": true,
-          "invalid-first-character-of-tag-name": true,
-          "missing-attribute-value": true,
-          "missing-end-tag-name": true,
-          "missing-semicolon-after-character-reference": true,
-          "missing-whitespace-between-attributes": true,
-          "nested-comment": true,
-          "noncharacter-character-reference": true,
-          "noncharacter-in-input-stream": true,
-          "null-character-reference": true,
-          "surrogate-character-reference": true,
-          "surrogate-in-input-stream": true,
-          "unexpected-character-in-attribute-name": true,
-          "unexpected-character-in-unquoted-attribute-value": true,
-          "unexpected-equals-sign-before-attribute-name": true,
-          "unexpected-null-character": true,
-          "unexpected-question-mark-instead-of-tag-name": true,
-          "unexpected-solidus-in-tag": true,
-          "unknown-named-character-reference": true,
-          "end-tag-with-attributes": true,
-          "duplicate-attribute": true,
-          "end-tag-with-trailing-solidus": true,
-          "non-void-html-element-start-tag-with-trailing-solidus": false,
-          "x-invalid-end-tag": true,
-          "x-invalid-namespace": true
+            "abrupt-closing-of-empty-comment": true,
+            "absence-of-digits-in-numeric-character-reference": true,
+            "cdata-in-html-content": true,
+            "character-reference-outside-unicode-range": true,
+            "control-character-in-input-stream": true,
+            "control-character-reference": true,
+            "eof-before-tag-name": true,
+            "eof-in-cdata": true,
+            "eof-in-comment": true,
+            "eof-in-tag": true,
+            "incorrectly-closed-comment": true,
+            "incorrectly-opened-comment": true,
+            "invalid-first-character-of-tag-name": true,
+            "missing-attribute-value": true,
+            "missing-end-tag-name": true,
+            "missing-semicolon-after-character-reference": true,
+            "missing-whitespace-between-attributes": true,
+            "nested-comment": true,
+            "noncharacter-character-reference": true,
+            "noncharacter-in-input-stream": true,
+            "null-character-reference": true,
+            "surrogate-character-reference": true,
+            "surrogate-in-input-stream": true,
+            "unexpected-character-in-attribute-name": true,
+            "unexpected-character-in-unquoted-attribute-value": true,
+            "unexpected-equals-sign-before-attribute-name": true,
+            "unexpected-null-character": true,
+            "unexpected-question-mark-instead-of-tag-name": true,
+            "unexpected-solidus-in-tag": true,
+            "unknown-named-character-reference": true,
+            "end-tag-with-attributes": true,
+            "duplicate-attribute": true,
+            "end-tag-with-trailing-solidus": true,
+            "non-void-html-element-start-tag-with-trailing-solidus": false,
+            "x-invalid-end-tag": true,
+            "x-invalid-namespace": true
         }]
     }
 };
