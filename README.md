@@ -35,17 +35,11 @@ npm i eslint babel-eslint eslint-plugin-html eslint-plugin-react eslint-plugin-v
     }
 ],
 // prettier 格式化配置
-"prettier.eslintIntegration": true,
 "prettier.tabWidth": 2,
 "prettier.useTabs": true,
 "prettier.singleQuote": true,
 "prettier.semi": false,
 // vetur格式化配置
-"vetur.format.defaultFormatterOptions": {
-    "wrap_attributes": "force-aligned"
-},
-// 关闭vetur默认的验证
-"vetur.validation.template": false,
 "vetur.format.defaultFormatter.html": "none",
 "vetur.format.defaultFormatter.css": "prettier",
 "vetur.format.defaultFormatter.postcss": "prettier",
