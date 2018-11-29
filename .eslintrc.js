@@ -1,4 +1,8 @@
 module.exports = {
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/recommended"
+  ],
 	//在这里添加更多的通用规则集，例如：
 	plugins: ['react', 'html', 'vue'],
 	env: {
@@ -15,10 +19,16 @@ module.exports = {
 	},
 	parserOptions: {
 		parser: 'babel-eslint',
-		ecmaVersion: 2017,
-		sourceType: 'module'
+		ecmaVersion: 6,
+		sourceType: 'module',
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
 	},
 	rules: {
+    "vue/html-indent": "off",
+    "vue/script-indent": "off",
+    "vue/html-self-closing": "off",
 		'vue/max-attributes-per-line': [
 			0,
 			{
